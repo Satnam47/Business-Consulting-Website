@@ -1,0 +1,140 @@
+.application-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+}
+
+.left-container {
+    flex: 0 0 30vh;
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.left-container::before {
+    content:"";
+    position: absolute;
+    inset: 0;
+    background-image: url(/assets/img/office.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.apply-title {
+    padding: 2rem 0;
+    font-size: 2em;
+    color: #fff; 
+}
+
+.welcome-message {
+    font-size: 1rem;
+}
+
+.form-container {
+    padding: 0 3em;
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    margin-bottom: 0.5em;
+}
+
+.form-container select, 
+form input, #custom-upload {
+    height: 40px;
+}
+
+.form-group select {
+    background-color: #fff;
+}
+
+.form-group input[type=file] {
+    display: none;
+}
+
+#custom-upload, .form-container input[type=submit] {
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 1em;
+}
+
+#information {
+    resize: vertical;
+}
+
+
+
+@media only screen and (min-width: 680px) {
+    .form-container form {
+        flex-flow: row wrap;
+    }
+
+    .form-group, .form-container input[type=submit] {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 0.5em;
+    }
+
+    .form-group:nth-child(8) {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .apply-title {
+        font-size: 3em;
+    }
+
+    .welcome-message {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (min-width: 1068px) {
+    .application-container {
+        flex-direction: row;
+    }
+
+    .left-container {
+        flex: 0 0 50%;
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+    .application-container {
+        padding: 0 10%;
+    }
+}

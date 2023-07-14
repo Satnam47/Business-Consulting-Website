@@ -1,0 +1,3 @@
+try opening file with vscode live server 
+
+also check screenshot folder 
